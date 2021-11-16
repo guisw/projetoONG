@@ -1,6 +1,21 @@
 h1{
     border: 2px #eee solid;
-    color: brown;
+    color: rgb(35, 14, 112);
     text-align: center;
     padding: 10px;
+}
+
+article{
+	background: #fff;
+	padding: 15px;
+	border: 2px solid #505050;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+p{
+	margin-bottom: 0;
+	margin-bottom: 15px;
+	text-transform: capitalize;
+	text-align: justify;
 }

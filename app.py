@@ -75,3 +75,7 @@ def delete(id):
     db.session.commit()
     flash(' "{}" foi apagado com sucesso!'.format(post.title))
     return redirect(url_for('index'))
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
