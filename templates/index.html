@@ -1,15 +1,119 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Bem-vindo ao serviço de postagens! {% endblock %}</h1>
-    {% for post in posts %}
-    <a href="a">
-        <h2>{{ post['title'] }}</h2>
-    </a>
-    <span clas="badge badge-primary">{{ post['created'] }}</span>
-    <a href="{{ url_for('edit', id=post['id']) }}"
-        <span claas="badge badge-warning">Editar</span>
-    </a>    
-    <hr>
-    {% endfor %}
+ <!-- WEBDOOR -->
+ <div class="mt-5 text-center">
+    <image id="webdoor" src="{{url_for('static', filename='img/anjos.png')}}" alt="webdoor">
+  </div>
+  <!-- WEBDOOR -->
+  <section class="d-flex flex-column justify-content-center align-items-center pt-5  text-center w-50 m-auto"
+    id="intro">
+    <h1 class="p-3 fs-2 border-top border-3">Centro Brasileiro de Apoio e Humanização
+      a Pessoas com Câncer e Escalpelados <span class="text-primary">Anjos das Perucas</span>
+    </h1>
+    <p class="p-3  fs-4">
+      Nós do <span class="text-primary">Anjos das Perucas</span> buscamos fazer um trabalho social gratuito trazendo a
+      melhora da
+      qualidade de vida das pessoas que recebem a assistência de nossos projetos.
+    </p>
+  </section>
+
+  <section class="w-100">
+    <div class="row w-75 mx-auto" id="servicios-fila-1">
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono-wrap">
+        <image src="{{url_for('static', filename='img/perucas.png')}}" alt="desarrollo" width="180" height="160">
+
+        <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1">Confecção de Perucas
+          </h3>
+          <p class="px-4">Confecção de perucas para
+            pacientes que estão passando
+            pelo tratamento oncológico
+          </p>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start  my-5 icono-wrap">
+        <img src="{{url_for('static', filename='img/doacaoperuca.png')}}" alt="perucas" width="180" height="160">
+
+        <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Doação de Perucas</h3>
+          <p class="px-4">Doação de perucas para
+            pacientes que estão passando
+            pelo tratamento oncológico</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row w-75 mx-auto mb-5" id="servicios-fila-2">
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start  my-5 icono-wrap">
+        <img src="{{url_for('static', filename='img/arrecadacaobrinquedos.png')}}" alt="brinquedos" width="180" height="160">
+
+        <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1">Arrecadação de Brinquedos</h3>
+          <p class="px-4">Arrecadação e confecção de brinquedos para crianças carentes da região</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono-wrap">
+        <img src="{{url_for('static', filename='img/alimentos.png')}}" alt="alimentos" width="180" height="160">
+
+        <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1">Arrecadação de alimentos</h3>
+          <p class="px-4">Arrecadação de alimentos
+            no Hipermercado Extra</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--========================================================== -->
+  <!-- QUEM SOMOS E OBJETIVOS-->
+  <!--========================================================== -->
+
+  <section>
+    <div class="container w-50 m-auto text-center" id="equipo">
+      <h1 class="mb-5 fs-2"><span class="text-primary">Quem Somos?</span></h1>
+      <p class="fs-4 ">Através de um trabalho qualificado e inovador, nossa OSCIP (Organização da Sociedade Civil
+        de Interesse Público) está sempre pronta para elaborar projetos em várias áreas, tais como, saúde, educação,
+        assistência
+        social e outras.
+      </p>
+    </div>
+
+    <section>
+      <div class="container w-50 m-auto text-center" id="equipo2">
+        <h1 class="mb-5 fs-2"><span class="text-primary">Objetivos Sociais</span></h1>
+        <p class="fs-4 ">Baseado no nosso estatuto os Anjos Das Perucas atua nas seguintes áreas através de
+          convênios, parcerias e/ou subvenções governamentais:
+          Assistência Social,
+          Cultura,
+          Saúde,
+          Educação,
+          Empregabilidade,
+          Trabalho,
+          Economia Solidária,
+          Geração de Renda,
+          Empreendimentos Sociais,
+          Cooperativas Populares,
+          Alimentação,
+          Transporte,
+          Prevenção de Doenças,
+          Combate ao Uso de Drogas e de Dependência Química,
+          Esporte,
+          Meio Ambiente,
+          Turismo e Lazer.
+        </p>
+      </div>
+
+      <div class="mt-5 text-center">
+        <h1 class="mb-5 fs-2"><span class="text-primary">Localização</span></h1>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d58648.59142042582!2d-47.33412053260572!3d-23.259930961470747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x94cf5018e335aaab%3A0x24d1305bedfde6eb!2sAnjos%20Das%20Perucas%2C%20R.%20Mal.%20Deodoro%2C%20360%20-%20Liberdade%2C%20Itu%20-%20SP%2C%2013300-110!3m2!1d-23.2599366!2d-47.299016699999996!4m5!1s0x94cf5018e335aaab%3A0x24d1305bedfde6eb!2sanjos%20das%20perucas%20itu!3m2!1d-23.2599366!2d-47.299016699999996!5e0!3m2!1spt-BR!2sbr!4v1637765727402!5m2!1spt-BR!2sbr"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+    
 {% endblock %}    

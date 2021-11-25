@@ -4,6 +4,8 @@ import sqlite3
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.exceptions import abort
 
+
+
 project_dir = os.path.dirname(os.path.abspath(__file__))
 database_file = "sqlite:///{}".format(os.path.join(project_dir, "database.db"))
 
@@ -11,6 +13,7 @@ app = Flask('__name__')
 app.config['SECRET_KEY'] = 'your secret key'
 app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 db = SQLAlchemy(app)
+
 
 class Posts(db.Model):
     id = db.Column(db.Integer, primary_key=True)
